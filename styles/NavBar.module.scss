@@ -1,0 +1,57 @@
+@import "./media.scss";
+
+.nav_container {
+    height: 9vh;
+    background-color: $bg-elements;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+
+    .nav_logo {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            color: white;
+            font-size: 36px;
+            margin: 0;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: 0.2s all ease-in-out;
+
+            span {
+                font-size: 26px;
+            }
+
+            &:hover {
+                color: rgb(210, 210, 210);
+            }
+
+        }
+    }
+
+    .nav_items {
+        color: white;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        h2 {
+            font-size: 24px;
+            margin: 0;
+            cursor: pointer;
+            transition: 0.2s all ease-in-out;
+
+            &:hover {
+                color: rgb(210, 210, 210);
+            }
+
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

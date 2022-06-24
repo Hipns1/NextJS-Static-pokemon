@@ -1,0 +1,111 @@
+@import "./media.scss";
+
+.detail_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 91vh;
+
+    @include media-resp(md) {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .details_image {
+        margin: 0 20px;
+        background-color: #282828a9;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        height: 300px;
+        min-width: 250px;
+
+        img {
+            height: 80%;
+        }
+
+        @include media-resp(md) {
+            width: 90%;
+            margin-top: 40px;
+        }
+    }
+
+    .detail_text {
+        margin: 0 20px;
+        background-color: rgba(40, 40, 40, 0.662);
+        border-radius: 8px;
+        padding: 26px;
+        height: 300px;
+        width: 500px;
+
+        @include media-resp(md) {
+            margin-top: 40px;
+            width: 90%;
+        }
+
+        @include media-resp(sm) {
+            height: auto;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: $color-text;
+        }
+
+        .detail_text__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include media-resp(sm) {
+                flex-direction: column;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                font-size: 36px;
+                text-transform: capitalize;
+                color: $color-text;
+            }
+
+            button {
+                width: 170px;
+                background-color: transparent;
+                border: 2px solid white;
+                border-radius: 8px;
+                cursor: pointer;
+                height: 40px;
+                font-weight: bold;
+                color: $color-text;
+            }
+        }
+
+        .detail_text__footer {
+            h2 {
+                font-size: 22px;
+                color: $color-text;
+            }
+
+            .detail_text__sprites {
+                min-width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+
+                @include media-resp(sm) {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}
+
+.detail_btn__delete {
+    border: 2px solid #902323 !important;
+    color: #902323 !important;
+}

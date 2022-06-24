@@ -1,0 +1,23 @@
+//Definicion de la paleta de colores
+$bg-main: #000000;
+$color-text: white;
+$bg-elements: #16181a;
+
+//Definicion de tamaños de texto
+$size-sm: 22px;
+$size-md: 26px;
+$size-lg: 36px;
+
+//Definicion de los breakpoints
+$breakpoints: (
+    sm: 540px, //pantalla de telefono
+    md: 768px, //pantall de tablet
+    lg: 1024px //pantalla de laptop/desktop
+);
+
+//Creacion del mixin
+@mixin media-resp($breakpoint) {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
